@@ -1,0 +1,23 @@
+{
+  "name": "tdb-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "clean": "rimraf build",
+    "start": "npm run build && npm run start:no-compile",
+    "start:no-compile": "node build/src/main.js",
+    "test": "npm run build && npm run test:no-compile",
+    "test:no-compile": "node build/test/test.js"
+  },
+  "author": "XITASO GmbH",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^8.0.47",
+    "rimraf": "^2.6.2",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  }
+}
